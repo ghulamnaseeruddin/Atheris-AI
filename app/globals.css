@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 255 255 255;
+  --surface: 250 250 250;
+  --border: 228 228 231;
+  --text: 24 24 27;
+  --muted: 113 113 122;
+  --accent: 79 70 229;
+  --accent-fg: 255 255 255;
+}
+
+.dark {
+  --bg: 12 12 14;
+  --surface: 20 20 23;
+  --border: 39 39 42;
+  --text: 244 244 245;
+  --muted: 161 161 170;
+  --accent: 129 140 248;
+  --accent-fg: 17 17 23;
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 9999px;
+}
+
+.prose-atheris pre {
+  background: rgb(var(--surface));
+  border: 1px solid rgb(var(--border));
+  border-radius: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+.prose-atheris code {
+  font-family: ui-monospace, "Fira Code", monospace;
+  font-size: 0.875rem;
+}
